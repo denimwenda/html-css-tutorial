@@ -1,5 +1,7 @@
 body {
     background-color: rgb(0, 255, 30);
+    background-image: url(images/IMG_20230319_145436_488.jpg);
+    background-size: cover;
 }
 .container {
     margin-left: auto;
@@ -16,10 +18,28 @@ nav {
     height: 40px;
 }
 main {
-    background-color: orange;
+    background-color: black;
     height: 400px;
+    text-align: center;
+    padding-top: 80px;
+    padding-left: 240px;
+    padding-right: 240px;
 }
 footer {
     background-color: greenyellow;
     height: 100px;
+}
+h1 {
+    font-size: 84px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+p {
+    font-size: 18px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
