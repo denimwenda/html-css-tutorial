@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Bar Example</title>
+    <style>
+        /* Some basic styling for demonstration purposes */
+        #search-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #result-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="search-container">
+    <label for="search">Search:</label>
+    <input type="text" id="search" oninput="performSearch()">
+</div>
+
+<div id="result-container">
+    <!-- This is where search results will be displayed -->
+</div>
+
+<script>
+    // Sample data
+    const items = [
+        "Item 1",
+        "Item 2",
+        "Item 3",
+        "Another Item",
+        "One More Item"
+        // Add more items as needed
+    ];
+
+    function performSearch() {
+        const searchTerm = document.getElementById('search').value.toLowerCase();
+        const resultsContainer = document.getElementById('result-container');
+
+        // Clear previous search results
+        resultsContainer.innerHTML = '';
+
+        // Filter items based on the search term
+        const filteredItems = items.filter(item => item.toLowerCase().includes(searchTerm));
+
+        // Display the search results
+        filteredItems.forEach(item => {
+            const resultItem = document.createElement('div');
+            resultItem.textContent = item;
+            resultsContainer.appendChild(resultItem);
+        });
+    }
+</script>
+
+</body>
+</html>
